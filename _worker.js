@@ -325,9 +325,9 @@ export default {
 			}
 			
 			const newAddressesapi = await getAddressesapi();
-			const newAddressescsv = await getAddressescsv();
+			//const newAddressescsv = await getAddressescsv();
 			addresses = addresses.concat(newAddressesapi);
-			addresses = addresses.concat(newAddressescsv);
+			//addresses = addresses.concat(newAddressescsv);
 			
 			// 使用Set对象去重
 			const uniqueAddresses = [...new Set(addresses)];
