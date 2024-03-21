@@ -51,6 +51,7 @@ endpointyx(){
 	
     # 删除 WARP Endpoint IP 优选工具及其附属文件
     rm -f ip.txt
+	rm -f result.csv
 	
 }
 
@@ -220,11 +221,11 @@ menu(){
     #    0 ) exit 1 ;;
     #    * ) endpoint4 ;;
 	echo "1.disconnect!"
-	warp-cli tunnel endpoint reset
-	warp-cli disconnect
+	#warp-cli tunnel endpoint reset
+	#warp-cli disconnect
 	echo "2.check ip list!"
 	endpoint4
-	warp-cli connect
+	#warp-cli connect
 	echo "4.connect!"
     #esac
 }
