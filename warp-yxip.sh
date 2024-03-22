@@ -42,6 +42,7 @@ endpointyx(){
     green "当前最优 Endpoint IP 结果如下，并已保存至 result.csv中："
     #cat result.csv | awk -F, '$3!="timeout ms" {print} ' | sort -t, -nk2 -nk3 | head -11 | awk -F, '{print "端点 "$1" 丢包率 "$2" 平均延迟 "$3}'
 	cat result.csv | grep ms | sed -n '1,60p' | awk -F, '{print $1}' | sed '1,5p' >addressesapi.txt
+    sed -i '1,$s/\(.*\)/\1#JP/g' addressesapi.txt
     echo ""
     #yellow "使用方法如下："
     #yellow "1. 将 WireGuard 节点的默认的 Endpoint IP：engage.cloudflareclient.com:2408 替换成本地网络最优的 Endpoint IP"
@@ -220,7 +221,7 @@ menu(){
     #    2 ) endpoint6 ;;
     #    0 ) exit 1 ;;
     #    * ) endpoint4 ;;
-	echo "1.disconnect!"
+	#echo "1.disconnect!"
 	#warp-cli tunnel endpoint reset
 	#warp-cli disconnect
 	echo "2.check ip list!"
