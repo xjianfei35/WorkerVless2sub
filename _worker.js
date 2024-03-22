@@ -14,7 +14,7 @@ let addressesapi = [
 	'https://github.com/xjianfei35/WorkerVless2sub/blob/main/addressesapi.txt' //可参考内容格式 自行搭建。
 ];
 
-let DLS = 4;//速度下限
+let DLS = 250;//速度下限
 let addressescsv = [
 	'https://github.com/xjianfei35/WorkerVless2sub/blob/main/addressescsv.csv' //iptest测速结果文件。
 ];
@@ -208,16 +208,8 @@ export default {
 			مسیر باید شامل "/sub" باشد
 			
 			${url.origin}/sub?host=[your host]&uuid=[your uuid]&path=[your path]
-			
-			
-			
-			
-			
-			
-				
 				https://github.com/cmliu/WorkerVless2sub
 				`;
-			
 				return new Response(responseText, {
 				status: 400,
 				headers: { 'content-type': 'text/plain; charset=utf-8' },
@@ -231,16 +223,8 @@ export default {
 			پارامترهای ضروری وارد نشده: هاست و یوآی‌دی
 			
 			${url.origin}/sub?host=[your host]&uuid=[your uuid]&path=[your path]
-			
-			
-			
-			
-			
-			
-				
 				https://github.com/cmliu/WorkerVless2sub
 				`;
-			
 				return new Response(responseText, {
 				status: 400,
 				headers: { 'content-type': 'text/plain; charset=utf-8' },
@@ -325,9 +309,9 @@ export default {
 			}
 			
 			const newAddressesapi = await getAddressesapi();
-			//const newAddressescsv = await getAddressescsv();
+			const newAddressescsv = await getAddressescsv();
 			addresses = addresses.concat(newAddressesapi);
-			//addresses = addresses.concat(newAddressescsv);
+			addresses = addresses.concat(newAddressescsv);
 			
 			// 使用Set对象去重
 			const uniqueAddresses = [...new Set(addresses)];
