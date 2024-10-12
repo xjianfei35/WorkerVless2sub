@@ -24,7 +24,7 @@ let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/conf
 
 let link = '';
 let edgetunnel = 'ed';
-let RproxyIP = 'false';
+let RproxyIP = 'true';
 let proxyIPs = [
 	'proxyip.aliyun.fxxk.dedyn.io',
 	'proxyip.multacom.fxxk.dedyn.io',
