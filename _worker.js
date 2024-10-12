@@ -27,7 +27,7 @@ let edgetunnel = 'ed';
 let RproxyIP = 'true';
 let proxyIPs = [
 	'workers.cloudflare.cyou',
-	'proxyip.us.fxxk.dedyn.io'，
+	'proxyip.us.fxxk.dedyn.io',
 	'23.162.136.169',
 	'107.189.7.254',
 	'157.254.21.56'
