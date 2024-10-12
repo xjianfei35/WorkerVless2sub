@@ -26,9 +26,11 @@ let link = '';
 let edgetunnel = 'ed';
 let RproxyIP = 'true';
 let proxyIPs = [
-	'proxyip.aliyun.fxxk.dedyn.io',
-	'proxyip.multacom.fxxk.dedyn.io',
-	'proxyip.vultr.fxxk.dedyn.io',
+	'workers.cloudflare.cyou',
+	'proxyip.us.fxxk.dedyn.io'
+	'23.162.136.169',
+	'107.189.7.254',
+	'157.254.21.56'
 ];
 let CMproxyIPs = [
 	{ proxyIP: "proxyip.fxxk.dedyn.io", type: "HK" },
